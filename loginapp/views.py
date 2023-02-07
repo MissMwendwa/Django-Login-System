@@ -7,6 +7,15 @@ def home(request):
 
 #the signing requests
 def signup(request):
+
+    if request.method == POST:
+        username = request.POST["username"]
+        fname = request.POST["fname"]
+        lname = request.POST["lname"]
+        email = request.POST["email"]
+        pass1 = request.POST["pass1"]
+        pass2 = request.POST["pass2"]
+        
     return render(request, "loginapp/signup.html")
 
 def signin(request):
